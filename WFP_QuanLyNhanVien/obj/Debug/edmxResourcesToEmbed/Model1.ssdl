@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Nhân_Viên">
+    <Key>
+      <PropertyRef Name="Mã_Nhân_Viên" />
+    </Key>
+    <Property Name="Mã_Nhân_Viên" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tên_Nhân_Viên" Type="nvarchar" MaxLength="150" />
+    <Property Name="Năm_Sinh" Type="int" />
+    <Property Name="Lương" Type="float" />
+    <Property Name="Nhóm_Máu" Type="char" MaxLength="1" />
+    <Property Name="Giới_Tính" Type="bit" />
+    <Property Name="Ảnh" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="DBModelStoreContainer">
+    <EntitySet Name="Nhân_Viên" EntityType="Self.Nhân_Viên" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
